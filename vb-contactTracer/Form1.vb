@@ -1,4 +1,6 @@
-﻿Public Class Form1
+﻿Imports System.IO
+
+Public Class Form1
     Private Sub clock_Tick(sender As Object, e As EventArgs) Handles clock.Tick
         day.Value = DateTime.Now
         time.Text = DateTime.Now.ToShortTimeString()
@@ -74,7 +76,64 @@
 
     ' Process data if all fields are filled up
     Private Sub processData()
+        Dim timeDate As String = DateTime.Now.ToString(),
+            temp As String = Me.temp.Text & " °C",
+            fullName As String = $"{last.Text}, {first.Text} {middle.Text}",
+            completeAddress As String = $"{house.Text} {street.Text} {barangay.Text}, {city.Text}",
+            contacts As String = mobile.Text,
+            gender As String = "",
+            health As String = ""
 
+        For Each checkbox In innerTable.Controls.OfType(Of CheckBox)()
+            If checkbox.Checked Then
+                If health = "" Then
+                    health = $"Has {checkbox.Name}"
+                Else
+                    health += $", has {checkbox.Name}"
+                End If
+            End If
+        Next
+
+        If health = "" Then health = "No COVID-like symptoms"
+        gender = If(male.Checked, "Male", "Female")
+
+        ' Execute database entry based on initialized fields above
+        databaseEnter(New List(Of String)() From {
+            timeDate, temp, fullName, gender,
+            completeAddress, health, contacts
+        })
+
+        ' Determine between form resubmission or application exit
+        If MessageBox.Show($"Your form has successfully pushed through" &
+            $", {first.Text}~ much thanks!" & vbLf & vbLf & $"Want to submit again?",
+            "Submission Complete", MessageBoxButtons.YesNo,
+            MessageBoxIcon.Asterisk) = DialogResult.No Then Application.[Exit]()
+
+        ' Clear all fields
+        clearAll(Me.innerTable)
+    End Sub
+
+    Private Sub databaseEnter(entries As List(Of String))
+
+        ' Initialize database file & its directory
+        Dim username As String = "Benedict"
+        Dim database As String = $"C:\Users\{username}\Documents\CTDatabase.txt"
+        ' Note: 'username' & 'database' can be changed depending on target
+
+        Dim enter As String = ""
+        For Each entry In entries
+            enter += entry & vbLf
+        Next
+
+        ' If database specified above is found...
+        If File.Exists(database) Then
+            Using myFile = New StreamWriter(database, append:=True)
+                myFile.NewLine = vbLf
+                myFile.WriteLine(enter) ' Append to file
+            End Using
+        Else
+            File.WriteAllText(database, enter & vbLf) ' Else, create new
+        End If
     End Sub
 
     ' Clear all fields recursively
