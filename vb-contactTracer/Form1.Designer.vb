@@ -36,7 +36,7 @@ Partial Class Form1
         Me.addressLabel = New System.Windows.Forms.Label()
         Me.checkLabel = New System.Windows.Forms.Label()
         Me.detailsLabel = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.infoTable = New System.Windows.Forms.TableLayoutPanel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
@@ -46,7 +46,7 @@ Partial Class Form1
         Me.middle = New System.Windows.Forms.TextBox()
         Me.male = New System.Windows.Forms.RadioButton()
         Me.female = New System.Windows.Forms.RadioButton()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
+        Me.addressTable = New System.Windows.Forms.TableLayoutPanel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
@@ -67,8 +67,8 @@ Partial Class Form1
         Me.clock = New System.Windows.Forms.Timer(Me.components)
         Me.outerTable.SuspendLayout()
         Me.innerTable.SuspendLayout()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
+        Me.infoTable.SuspendLayout()
+        Me.addressTable.SuspendLayout()
         Me.SuspendLayout()
         '
         'outerTable
@@ -106,8 +106,8 @@ Partial Class Form1
         Me.innerTable.Controls.Add(Me.addressLabel, 0, 6)
         Me.innerTable.Controls.Add(Me.checkLabel, 0, 8)
         Me.innerTable.Controls.Add(Me.detailsLabel, 0, 9)
-        Me.innerTable.Controls.Add(Me.TableLayoutPanel1, 1, 4)
-        Me.innerTable.Controls.Add(Me.TableLayoutPanel2, 1, 6)
+        Me.innerTable.Controls.Add(Me.infoTable, 1, 4)
+        Me.innerTable.Controls.Add(Me.addressTable, 1, 6)
         Me.innerTable.Controls.Add(Me.Label19, 1, 9)
         Me.innerTable.Controls.Add(Me.Label20, 2, 9)
         Me.innerTable.Controls.Add(Me.day, 1, 3)
@@ -262,33 +262,33 @@ Partial Class Form1
         Me.detailsLabel.Text = "Contact Details"
         Me.detailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'TableLayoutPanel1
+        'infoTable
         '
-        Me.TableLayoutPanel1.ColumnCount = 5
-        Me.innerTable.SetColumnSpan(Me.TableLayoutPanel1, 3)
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.66!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.33!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.33!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Label11, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label12, 1, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label13, 2, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.Label14, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.last, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.first, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.middle, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.male, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.female, 4, 1)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(186, 148)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.innerTable.SetRowSpan(Me.TableLayoutPanel1, 2)
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(545, 58)
-        Me.TableLayoutPanel1.TabIndex = 10
+        Me.infoTable.ColumnCount = 5
+        Me.innerTable.SetColumnSpan(Me.infoTable, 3)
+        Me.infoTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34!))
+        Me.infoTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.34!))
+        Me.infoTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.66!))
+        Me.infoTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.33!))
+        Me.infoTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 14.33!))
+        Me.infoTable.Controls.Add(Me.Label11, 0, 0)
+        Me.infoTable.Controls.Add(Me.Label12, 1, 0)
+        Me.infoTable.Controls.Add(Me.Label13, 2, 0)
+        Me.infoTable.Controls.Add(Me.Label14, 3, 0)
+        Me.infoTable.Controls.Add(Me.last, 0, 1)
+        Me.infoTable.Controls.Add(Me.first, 1, 1)
+        Me.infoTable.Controls.Add(Me.middle, 2, 1)
+        Me.infoTable.Controls.Add(Me.male, 3, 1)
+        Me.infoTable.Controls.Add(Me.female, 4, 1)
+        Me.infoTable.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.infoTable.Location = New System.Drawing.Point(186, 148)
+        Me.infoTable.Name = "infoTable"
+        Me.infoTable.RowCount = 2
+        Me.innerTable.SetRowSpan(Me.infoTable, 2)
+        Me.infoTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.infoTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.infoTable.Size = New System.Drawing.Size(545, 58)
+        Me.infoTable.TabIndex = 10
         '
         'Label11
         '
@@ -384,31 +384,31 @@ Partial Class Form1
         Me.female.Text = "Female"
         Me.female.UseVisualStyleBackColor = True
         '
-        'TableLayoutPanel2
+        'addressTable
         '
-        Me.TableLayoutPanel2.ColumnCount = 4
-        Me.innerTable.SetColumnSpan(Me.TableLayoutPanel2, 3)
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Label15, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label16, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label17, 2, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label18, 3, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.house, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.street, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.barangay, 2, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.city, 3, 1)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(186, 212)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.innerTable.SetRowSpan(Me.TableLayoutPanel2, 2)
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(545, 58)
-        Me.TableLayoutPanel2.TabIndex = 11
+        Me.addressTable.ColumnCount = 4
+        Me.innerTable.SetColumnSpan(Me.addressTable, 3)
+        Me.addressTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.addressTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.addressTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.addressTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.addressTable.Controls.Add(Me.Label15, 0, 0)
+        Me.addressTable.Controls.Add(Me.Label16, 1, 0)
+        Me.addressTable.Controls.Add(Me.Label17, 2, 0)
+        Me.addressTable.Controls.Add(Me.Label18, 3, 0)
+        Me.addressTable.Controls.Add(Me.house, 0, 1)
+        Me.addressTable.Controls.Add(Me.street, 1, 1)
+        Me.addressTable.Controls.Add(Me.barangay, 2, 1)
+        Me.addressTable.Controls.Add(Me.city, 3, 1)
+        Me.addressTable.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.addressTable.Location = New System.Drawing.Point(186, 212)
+        Me.addressTable.Name = "addressTable"
+        Me.addressTable.RowCount = 2
+        Me.innerTable.SetRowSpan(Me.addressTable, 2)
+        Me.addressTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.addressTable.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.addressTable.Size = New System.Drawing.Size(545, 58)
+        Me.addressTable.TabIndex = 11
         '
         'Label15
         '
@@ -610,10 +610,10 @@ Partial Class Form1
         Me.outerTable.ResumeLayout(False)
         Me.innerTable.ResumeLayout(False)
         Me.innerTable.PerformLayout()
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel2.PerformLayout()
+        Me.infoTable.ResumeLayout(False)
+        Me.infoTable.PerformLayout()
+        Me.addressTable.ResumeLayout(False)
+        Me.addressTable.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -630,12 +630,12 @@ Partial Class Form1
     Friend WithEvents addressLabel As Label
     Friend WithEvents checkLabel As Label
     Friend WithEvents detailsLabel As Label
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents infoTable As TableLayoutPanel
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
+    Friend WithEvents addressTable As TableLayoutPanel
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
     Friend WithEvents Label17 As Label
