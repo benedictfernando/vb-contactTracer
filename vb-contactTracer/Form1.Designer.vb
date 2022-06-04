@@ -22,47 +22,49 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.outerTable = New System.Windows.Forms.TableLayoutPanel()
         Me.innerTable = New System.Windows.Forms.TableLayoutPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.heading = New System.Windows.Forms.Label()
+        Me.note = New System.Windows.Forms.Label()
+        Me.time = New System.Windows.Forms.Label()
+        Me.dataLabel = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
+        Me.infoLabel = New System.Windows.Forms.Label()
+        Me.addressLabel = New System.Windows.Forms.Label()
+        Me.checkLabel = New System.Windows.Forms.Label()
+        Me.detailsLabel = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.last = New System.Windows.Forms.TextBox()
+        Me.first = New System.Windows.Forms.TextBox()
+        Me.middle = New System.Windows.Forms.TextBox()
+        Me.male = New System.Windows.Forms.RadioButton()
+        Me.female = New System.Windows.Forms.RadioButton()
         Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.house = New System.Windows.Forms.TextBox()
+        Me.street = New System.Windows.Forms.TextBox()
+        Me.barangay = New System.Windows.Forms.TextBox()
+        Me.city = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
-        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
-        Me.TextBox9 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.day = New System.Windows.Forms.DateTimePicker()
+        Me.temp = New System.Windows.Forms.TextBox()
+        Me.fever = New System.Windows.Forms.CheckBox()
+        Me.colds = New System.Windows.Forms.CheckBox()
+        Me.cough = New System.Windows.Forms.CheckBox()
+        Me.mobile = New System.Windows.Forms.TextBox()
+        Me.submit = New System.Windows.Forms.Button()
+        Me.clock = New System.Windows.Forms.Timer(Me.components)
         Me.outerTable.SuspendLayout()
         Me.innerTable.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -94,27 +96,27 @@ Partial Class Form1
         Me.innerTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.innerTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.innerTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
-        Me.innerTable.Controls.Add(Me.Label1, 0, 0)
-        Me.innerTable.Controls.Add(Me.Label2, 0, 1)
-        Me.innerTable.Controls.Add(Me.Label3, 3, 0)
-        Me.innerTable.Controls.Add(Me.Label4, 0, 2)
+        Me.innerTable.Controls.Add(Me.heading, 0, 0)
+        Me.innerTable.Controls.Add(Me.note, 0, 1)
+        Me.innerTable.Controls.Add(Me.time, 3, 0)
+        Me.innerTable.Controls.Add(Me.dataLabel, 0, 2)
         Me.innerTable.Controls.Add(Me.Label5, 1, 2)
         Me.innerTable.Controls.Add(Me.Label6, 2, 2)
-        Me.innerTable.Controls.Add(Me.Label7, 0, 4)
-        Me.innerTable.Controls.Add(Me.Label8, 0, 6)
-        Me.innerTable.Controls.Add(Me.Label9, 0, 8)
-        Me.innerTable.Controls.Add(Me.Label10, 0, 9)
+        Me.innerTable.Controls.Add(Me.infoLabel, 0, 4)
+        Me.innerTable.Controls.Add(Me.addressLabel, 0, 6)
+        Me.innerTable.Controls.Add(Me.checkLabel, 0, 8)
+        Me.innerTable.Controls.Add(Me.detailsLabel, 0, 9)
         Me.innerTable.Controls.Add(Me.TableLayoutPanel1, 1, 4)
         Me.innerTable.Controls.Add(Me.TableLayoutPanel2, 1, 6)
         Me.innerTable.Controls.Add(Me.Label19, 1, 9)
         Me.innerTable.Controls.Add(Me.Label20, 2, 9)
-        Me.innerTable.Controls.Add(Me.DateTimePicker1, 1, 3)
-        Me.innerTable.Controls.Add(Me.TextBox1, 2, 3)
-        Me.innerTable.Controls.Add(Me.CheckBox1, 1, 8)
-        Me.innerTable.Controls.Add(Me.CheckBox2, 2, 8)
-        Me.innerTable.Controls.Add(Me.CheckBox3, 3, 8)
-        Me.innerTable.Controls.Add(Me.TextBox9, 1, 10)
-        Me.innerTable.Controls.Add(Me.Button1, 3, 9)
+        Me.innerTable.Controls.Add(Me.day, 1, 3)
+        Me.innerTable.Controls.Add(Me.temp, 2, 3)
+        Me.innerTable.Controls.Add(Me.fever, 1, 8)
+        Me.innerTable.Controls.Add(Me.colds, 2, 8)
+        Me.innerTable.Controls.Add(Me.cough, 3, 8)
+        Me.innerTable.Controls.Add(Me.mobile, 1, 10)
+        Me.innerTable.Controls.Add(Me.submit, 3, 9)
         Me.innerTable.Dock = System.Windows.Forms.DockStyle.Fill
         Me.innerTable.Location = New System.Drawing.Point(23, 23)
         Me.innerTable.Name = "innerTable"
@@ -133,59 +135,59 @@ Partial Class Form1
         Me.innerTable.Size = New System.Drawing.Size(734, 411)
         Me.innerTable.TabIndex = 0
         '
-        'Label1
+        'heading
         '
-        Me.Label1.AutoSize = True
-        Me.innerTable.SetColumnSpan(Me.Label1, 3)
-        Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 27.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(3, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(543, 57)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Tracing Application Form"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft
+        Me.heading.AutoSize = True
+        Me.innerTable.SetColumnSpan(Me.heading, 3)
+        Me.heading.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.heading.Font = New System.Drawing.Font("Century Gothic", 27.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.heading.Location = New System.Drawing.Point(3, 0)
+        Me.heading.Name = "heading"
+        Me.heading.Size = New System.Drawing.Size(543, 57)
+        Me.heading.TabIndex = 0
+        Me.heading.Text = "Tracing Application Form"
+        Me.heading.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'Label2
+        'note
         '
-        Me.Label2.AutoSize = True
-        Me.innerTable.SetColumnSpan(Me.Label2, 3)
-        Me.Label2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(3, 57)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Label2.Size = New System.Drawing.Size(543, 24)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Note: Please fill out all fields honestly. Also, kindly not forget to submit this" &
+        Me.note.AutoSize = True
+        Me.innerTable.SetColumnSpan(Me.note, 3)
+        Me.note.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.note.Font = New System.Drawing.Font("Century Gothic", 9.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.note.Location = New System.Drawing.Point(3, 57)
+        Me.note.Name = "note"
+        Me.note.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.note.Size = New System.Drawing.Size(543, 24)
+        Me.note.TabIndex = 1
+        Me.note.Text = "Note: Please fill out all fields honestly. Also, kindly not forget to submit this" &
     " afterwards."
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.note.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'Label3
+        'time
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label3.Font = New System.Drawing.Font("Century Gothic", 27.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(552, 0)
-        Me.Label3.Name = "Label3"
-        Me.innerTable.SetRowSpan(Me.Label3, 4)
-        Me.Label3.Size = New System.Drawing.Size(179, 145)
-        Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Time"
-        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.time.AutoSize = True
+        Me.time.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.time.Font = New System.Drawing.Font("Century Gothic", 27.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
+        Me.time.Location = New System.Drawing.Point(552, 0)
+        Me.time.Name = "time"
+        Me.innerTable.SetRowSpan(Me.time, 4)
+        Me.time.Size = New System.Drawing.Size(179, 145)
+        Me.time.TabIndex = 2
+        Me.time.Text = "Time"
+        Me.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'Label4
+        'dataLabel
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(3, 81)
-        Me.Label4.Name = "Label4"
-        Me.innerTable.SetRowSpan(Me.Label4, 2)
-        Me.Label4.Size = New System.Drawing.Size(177, 64)
-        Me.Label4.TabIndex = 3
-        Me.Label4.Text = "Current Data"
-        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.dataLabel.AutoSize = True
+        Me.dataLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dataLabel.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
+        Me.dataLabel.Location = New System.Drawing.Point(3, 81)
+        Me.dataLabel.Name = "dataLabel"
+        Me.innerTable.SetRowSpan(Me.dataLabel, 2)
+        Me.dataLabel.Size = New System.Drawing.Size(177, 64)
+        Me.dataLabel.TabIndex = 3
+        Me.dataLabel.Text = "Current Data"
+        Me.dataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Label5
         '
@@ -209,56 +211,56 @@ Partial Class Form1
         Me.Label6.Text = "Temperature (°C)"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'Label7
+        'infoLabel
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label7.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(3, 145)
-        Me.Label7.Name = "Label7"
-        Me.innerTable.SetRowSpan(Me.Label7, 2)
-        Me.Label7.Size = New System.Drawing.Size(177, 64)
-        Me.Label7.TabIndex = 6
-        Me.Label7.Text = "Personal Information"
-        Me.Label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.infoLabel.AutoSize = True
+        Me.infoLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.infoLabel.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
+        Me.infoLabel.Location = New System.Drawing.Point(3, 145)
+        Me.infoLabel.Name = "infoLabel"
+        Me.innerTable.SetRowSpan(Me.infoLabel, 2)
+        Me.infoLabel.Size = New System.Drawing.Size(177, 64)
+        Me.infoLabel.TabIndex = 6
+        Me.infoLabel.Text = "Personal Information"
+        Me.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Label8
+        'addressLabel
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
-        Me.Label8.Location = New System.Drawing.Point(3, 209)
-        Me.Label8.Name = "Label8"
-        Me.innerTable.SetRowSpan(Me.Label8, 2)
-        Me.Label8.Size = New System.Drawing.Size(177, 64)
-        Me.Label8.TabIndex = 7
-        Me.Label8.Text = "Address"
-        Me.Label8.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.addressLabel.AutoSize = True
+        Me.addressLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.addressLabel.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
+        Me.addressLabel.Location = New System.Drawing.Point(3, 209)
+        Me.addressLabel.Name = "addressLabel"
+        Me.innerTable.SetRowSpan(Me.addressLabel, 2)
+        Me.addressLabel.Size = New System.Drawing.Size(177, 64)
+        Me.addressLabel.TabIndex = 7
+        Me.addressLabel.Text = "Address"
+        Me.addressLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Label9
+        'checkLabel
         '
-        Me.Label9.AutoSize = True
-        Me.Label9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
-        Me.Label9.Location = New System.Drawing.Point(3, 273)
-        Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(177, 65)
-        Me.Label9.TabIndex = 8
-        Me.Label9.Text = "Health Check"
-        Me.Label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.checkLabel.AutoSize = True
+        Me.checkLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.checkLabel.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
+        Me.checkLabel.Location = New System.Drawing.Point(3, 273)
+        Me.checkLabel.Name = "checkLabel"
+        Me.checkLabel.Size = New System.Drawing.Size(177, 65)
+        Me.checkLabel.TabIndex = 8
+        Me.checkLabel.Text = "Health Check"
+        Me.checkLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
-        'Label10
+        'detailsLabel
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
-        Me.Label10.Location = New System.Drawing.Point(3, 338)
-        Me.Label10.Name = "Label10"
-        Me.innerTable.SetRowSpan(Me.Label10, 2)
-        Me.Label10.Size = New System.Drawing.Size(177, 73)
-        Me.Label10.TabIndex = 9
-        Me.Label10.Text = "Contact Details"
-        Me.Label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.detailsLabel.AutoSize = True
+        Me.detailsLabel.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.detailsLabel.Font = New System.Drawing.Font("Century Gothic", 11.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point)
+        Me.detailsLabel.Location = New System.Drawing.Point(3, 338)
+        Me.detailsLabel.Name = "detailsLabel"
+        Me.innerTable.SetRowSpan(Me.detailsLabel, 2)
+        Me.detailsLabel.Size = New System.Drawing.Size(177, 73)
+        Me.detailsLabel.TabIndex = 9
+        Me.detailsLabel.Text = "Contact Details"
+        Me.detailsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'TableLayoutPanel1
         '
@@ -273,11 +275,11 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(Me.Label12, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label14, 3, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox3, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TextBox4, 2, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton1, 3, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton2, 4, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.last, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.first, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.middle, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.male, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.female, 4, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(186, 148)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -332,55 +334,55 @@ Partial Class Form1
         Me.Label14.Text = "Gender"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'TextBox2
+        'last
         '
-        Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox2.Location = New System.Drawing.Point(3, 32)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.PlaceholderText = "Ex: Dela Cruz"
-        Me.TextBox2.Size = New System.Drawing.Size(175, 22)
-        Me.TextBox2.TabIndex = 3
+        Me.last.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.last.Location = New System.Drawing.Point(3, 32)
+        Me.last.Name = "last"
+        Me.last.PlaceholderText = "Ex: Dela Cruz"
+        Me.last.Size = New System.Drawing.Size(175, 22)
+        Me.last.TabIndex = 3
         '
-        'TextBox3
+        'first
         '
-        Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox3.Location = New System.Drawing.Point(184, 32)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.PlaceholderText = "Ex: Juan"
-        Me.TextBox3.Size = New System.Drawing.Size(175, 22)
-        Me.TextBox3.TabIndex = 4
+        Me.first.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.first.Location = New System.Drawing.Point(184, 32)
+        Me.first.Name = "first"
+        Me.first.PlaceholderText = "Ex: Juan"
+        Me.first.Size = New System.Drawing.Size(175, 22)
+        Me.first.TabIndex = 4
         '
-        'TextBox4
+        'middle
         '
-        Me.TextBox4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox4.Location = New System.Drawing.Point(365, 32)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(30, 22)
-        Me.TextBox4.TabIndex = 5
+        Me.middle.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.middle.Location = New System.Drawing.Point(365, 32)
+        Me.middle.Name = "middle"
+        Me.middle.Size = New System.Drawing.Size(30, 22)
+        Me.middle.TabIndex = 5
         '
-        'RadioButton1
+        'male
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RadioButton1.Location = New System.Drawing.Point(401, 32)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(61, 23)
-        Me.RadioButton1.TabIndex = 6
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Male"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.male.AutoSize = True
+        Me.male.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.male.Location = New System.Drawing.Point(401, 32)
+        Me.male.Name = "male"
+        Me.male.Size = New System.Drawing.Size(61, 23)
+        Me.male.TabIndex = 6
+        Me.male.TabStop = True
+        Me.male.Text = "Male"
+        Me.male.UseVisualStyleBackColor = True
         '
-        'RadioButton2
+        'female
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.RadioButton2.Location = New System.Drawing.Point(468, 32)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(74, 23)
-        Me.RadioButton2.TabIndex = 7
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Female"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.female.AutoSize = True
+        Me.female.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.female.Location = New System.Drawing.Point(468, 32)
+        Me.female.Name = "female"
+        Me.female.Size = New System.Drawing.Size(74, 23)
+        Me.female.TabIndex = 7
+        Me.female.TabStop = True
+        Me.female.Text = "Female"
+        Me.female.UseVisualStyleBackColor = True
         '
         'TableLayoutPanel2
         '
@@ -394,10 +396,10 @@ Partial Class Form1
         Me.TableLayoutPanel2.Controls.Add(Me.Label16, 1, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label17, 2, 0)
         Me.TableLayoutPanel2.Controls.Add(Me.Label18, 3, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox5, 0, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox6, 1, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox7, 2, 1)
-        Me.TableLayoutPanel2.Controls.Add(Me.TextBox8, 3, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.house, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.street, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.barangay, 2, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.city, 3, 1)
         Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel2.Location = New System.Drawing.Point(186, 212)
         Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
@@ -452,41 +454,41 @@ Partial Class Form1
         Me.Label18.Text = "City"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
-        'TextBox5
+        'house
         '
-        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox5.Location = New System.Drawing.Point(3, 32)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.PlaceholderText = "Ex: 123"
-        Me.TextBox5.Size = New System.Drawing.Size(48, 22)
-        Me.TextBox5.TabIndex = 8
+        Me.house.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.house.Location = New System.Drawing.Point(3, 32)
+        Me.house.Name = "house"
+        Me.house.PlaceholderText = "Ex: 123"
+        Me.house.Size = New System.Drawing.Size(48, 22)
+        Me.house.TabIndex = 8
         '
-        'TextBox6
+        'street
         '
-        Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox6.Location = New System.Drawing.Point(57, 32)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.PlaceholderText = "Ex: 25th Street"
-        Me.TextBox6.Size = New System.Drawing.Size(157, 22)
-        Me.TextBox6.TabIndex = 9
+        Me.street.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.street.Location = New System.Drawing.Point(57, 32)
+        Me.street.Name = "street"
+        Me.street.PlaceholderText = "Ex: 25th Street"
+        Me.street.Size = New System.Drawing.Size(157, 22)
+        Me.street.TabIndex = 9
         '
-        'TextBox7
+        'barangay
         '
-        Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox7.Location = New System.Drawing.Point(220, 32)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.PlaceholderText = "Ex: BGC"
-        Me.TextBox7.Size = New System.Drawing.Size(157, 22)
-        Me.TextBox7.TabIndex = 10
+        Me.barangay.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.barangay.Location = New System.Drawing.Point(220, 32)
+        Me.barangay.Name = "barangay"
+        Me.barangay.PlaceholderText = "Ex: BGC"
+        Me.barangay.Size = New System.Drawing.Size(157, 22)
+        Me.barangay.TabIndex = 10
         '
-        'TextBox8
+        'city
         '
-        Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox8.Location = New System.Drawing.Point(383, 32)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.PlaceholderText = "Ex: Taguig"
-        Me.TextBox8.Size = New System.Drawing.Size(159, 22)
-        Me.TextBox8.TabIndex = 11
+        Me.city.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.city.Location = New System.Drawing.Point(383, 32)
+        Me.city.Name = "city"
+        Me.city.PlaceholderText = "Ex: Taguig"
+        Me.city.Size = New System.Drawing.Size(159, 22)
+        Me.city.TabIndex = 11
         '
         'Label19
         '
@@ -512,79 +514,84 @@ Partial Class Form1
         Me.Label20.Text = "By submitting, you agree to allow us store and use your data for tracking purpose" &
     "s, to keep us safe in this COVID-19 pandemic."
         '
-        'DateTimePicker1
+        'day
         '
-        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.DateTimePicker1.CustomFormat = "ddd dd MMM yyyy"
-        Me.DateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
-        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker1.Location = New System.Drawing.Point(186, 116)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(177, 22)
-        Me.DateTimePicker1.TabIndex = 1
+        Me.day.CalendarFont = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.day.CustomFormat = "ddd dd MMM yyyy"
+        Me.day.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.day.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.day.Location = New System.Drawing.Point(186, 116)
+        Me.day.Name = "day"
+        Me.day.Size = New System.Drawing.Size(177, 22)
+        Me.day.TabIndex = 1
         '
-        'TextBox1
+        'temp
         '
-        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(369, 116)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.PlaceholderText = "Ex: 35.6"
-        Me.TextBox1.Size = New System.Drawing.Size(177, 22)
-        Me.TextBox1.TabIndex = 2
+        Me.temp.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.temp.Location = New System.Drawing.Point(369, 116)
+        Me.temp.Name = "temp"
+        Me.temp.PlaceholderText = "Ex: 35.6"
+        Me.temp.Size = New System.Drawing.Size(177, 22)
+        Me.temp.TabIndex = 2
         '
-        'CheckBox1
+        'fever
         '
-        Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CheckBox1.Location = New System.Drawing.Point(186, 276)
-        Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(177, 59)
-        Me.CheckBox1.TabIndex = 12
-        Me.CheckBox1.Text = "Currently having fever?"
-        Me.CheckBox1.UseVisualStyleBackColor = True
+        Me.fever.AutoSize = True
+        Me.fever.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.fever.Location = New System.Drawing.Point(186, 276)
+        Me.fever.Name = "fever"
+        Me.fever.Size = New System.Drawing.Size(177, 59)
+        Me.fever.TabIndex = 12
+        Me.fever.Text = "Currently having fever?"
+        Me.fever.UseVisualStyleBackColor = True
         '
-        'CheckBox2
+        'colds
         '
-        Me.CheckBox2.AutoSize = True
-        Me.CheckBox2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CheckBox2.Location = New System.Drawing.Point(369, 276)
-        Me.CheckBox2.Name = "CheckBox2"
-        Me.CheckBox2.Size = New System.Drawing.Size(177, 59)
-        Me.CheckBox2.TabIndex = 13
-        Me.CheckBox2.Text = "Currently having colds?"
-        Me.CheckBox2.UseVisualStyleBackColor = True
+        Me.colds.AutoSize = True
+        Me.colds.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.colds.Location = New System.Drawing.Point(369, 276)
+        Me.colds.Name = "colds"
+        Me.colds.Size = New System.Drawing.Size(177, 59)
+        Me.colds.TabIndex = 13
+        Me.colds.Text = "Currently having colds?"
+        Me.colds.UseVisualStyleBackColor = True
         '
-        'CheckBox3
+        'cough
         '
-        Me.CheckBox3.AutoSize = True
-        Me.CheckBox3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.CheckBox3.Location = New System.Drawing.Point(552, 276)
-        Me.CheckBox3.Name = "CheckBox3"
-        Me.CheckBox3.Size = New System.Drawing.Size(179, 59)
-        Me.CheckBox3.TabIndex = 14
-        Me.CheckBox3.Text = "Currently having cough?"
-        Me.CheckBox3.UseVisualStyleBackColor = True
+        Me.cough.AutoSize = True
+        Me.cough.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.cough.Location = New System.Drawing.Point(552, 276)
+        Me.cough.Name = "cough"
+        Me.cough.Size = New System.Drawing.Size(179, 59)
+        Me.cough.TabIndex = 14
+        Me.cough.Text = "Currently having cough?"
+        Me.cough.UseVisualStyleBackColor = True
         '
-        'TextBox9
+        'mobile
         '
-        Me.TextBox9.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox9.Location = New System.Drawing.Point(186, 373)
-        Me.TextBox9.Name = "TextBox9"
-        Me.TextBox9.PlaceholderText = "Ex: 0912 345 6789"
-        Me.TextBox9.Size = New System.Drawing.Size(177, 22)
-        Me.TextBox9.TabIndex = 15
+        Me.mobile.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.mobile.Location = New System.Drawing.Point(186, 373)
+        Me.mobile.Name = "mobile"
+        Me.mobile.PlaceholderText = "Ex: 0912 345 6789"
+        Me.mobile.Size = New System.Drawing.Size(177, 22)
+        Me.mobile.TabIndex = 15
         '
-        'Button1
+        'submit
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button1.Location = New System.Drawing.Point(552, 341)
-        Me.Button1.Name = "Button1"
-        Me.innerTable.SetRowSpan(Me.Button1, 2)
-        Me.Button1.Size = New System.Drawing.Size(179, 67)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Submit"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.submit.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.submit.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.submit.Location = New System.Drawing.Point(552, 341)
+        Me.submit.Name = "submit"
+        Me.innerTable.SetRowSpan(Me.submit, 2)
+        Me.submit.Size = New System.Drawing.Size(179, 67)
+        Me.submit.TabIndex = 16
+        Me.submit.Text = "Submit"
+        Me.submit.UseVisualStyleBackColor = True
+        '
+        'clock
+        '
+        Me.clock.Enabled = True
+        Me.clock.Interval = 1000
         '
         'Form1
         '
@@ -613,16 +620,16 @@ Partial Class Form1
 
     Friend WithEvents outerTable As TableLayoutPanel
     Friend WithEvents innerTable As TableLayoutPanel
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents Label3 As Label
-    Friend WithEvents Label4 As Label
+    Friend WithEvents heading As Label
+    Friend WithEvents note As Label
+    Friend WithEvents time As Label
+    Friend WithEvents dataLabel As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents Label8 As Label
-    Friend WithEvents Label9 As Label
-    Friend WithEvents Label10 As Label
+    Friend WithEvents infoLabel As Label
+    Friend WithEvents addressLabel As Label
+    Friend WithEvents checkLabel As Label
+    Friend WithEvents detailsLabel As Label
     Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
     Friend WithEvents Label11 As Label
     Friend WithEvents Label12 As Label
@@ -635,20 +642,21 @@ Partial Class Form1
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents TextBox5 As TextBox
-    Friend WithEvents TextBox6 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox8 As TextBox
-    Friend WithEvents DateTimePicker1 As DateTimePicker
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents CheckBox1 As CheckBox
-    Friend WithEvents CheckBox2 As CheckBox
-    Friend WithEvents CheckBox3 As CheckBox
-    Friend WithEvents TextBox9 As TextBox
-    Friend WithEvents Button1 As Button
+    Friend WithEvents last As TextBox
+    Friend WithEvents first As TextBox
+    Friend WithEvents middle As TextBox
+    Friend WithEvents male As RadioButton
+    Friend WithEvents female As RadioButton
+    Friend WithEvents house As TextBox
+    Friend WithEvents street As TextBox
+    Friend WithEvents barangay As TextBox
+    Friend WithEvents city As TextBox
+    Friend WithEvents day As DateTimePicker
+    Friend WithEvents temp As TextBox
+    Friend WithEvents fever As CheckBox
+    Friend WithEvents colds As CheckBox
+    Friend WithEvents cough As CheckBox
+    Friend WithEvents mobile As TextBox
+    Friend WithEvents submit As Button
+    Friend WithEvents clock As Timer
 End Class
