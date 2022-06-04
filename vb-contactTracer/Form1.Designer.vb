@@ -36,17 +36,33 @@ Partial Class Form1
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label11 = New System.Windows.Forms.Label()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label16 = New System.Windows.Forms.Label()
         Me.Label17 = New System.Windows.Forms.Label()
         Me.Label18 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.TextBox7 = New System.Windows.Forms.TextBox()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label20 = New System.Windows.Forms.Label()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox2 = New System.Windows.Forms.CheckBox()
+        Me.CheckBox3 = New System.Windows.Forms.CheckBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.outerTable.SuspendLayout()
         Me.innerTable.SuspendLayout()
         Me.TableLayoutPanel1.SuspendLayout()
@@ -92,6 +108,13 @@ Partial Class Form1
         Me.innerTable.Controls.Add(Me.TableLayoutPanel2, 1, 6)
         Me.innerTable.Controls.Add(Me.Label19, 1, 9)
         Me.innerTable.Controls.Add(Me.Label20, 2, 9)
+        Me.innerTable.Controls.Add(Me.DateTimePicker1, 1, 3)
+        Me.innerTable.Controls.Add(Me.TextBox1, 2, 3)
+        Me.innerTable.Controls.Add(Me.CheckBox1, 1, 8)
+        Me.innerTable.Controls.Add(Me.CheckBox2, 2, 8)
+        Me.innerTable.Controls.Add(Me.CheckBox3, 3, 8)
+        Me.innerTable.Controls.Add(Me.TextBox9, 1, 10)
+        Me.innerTable.Controls.Add(Me.Button1, 3, 9)
         Me.innerTable.Dock = System.Windows.Forms.DockStyle.Fill
         Me.innerTable.Location = New System.Drawing.Point(23, 23)
         Me.innerTable.Name = "innerTable"
@@ -250,6 +273,11 @@ Partial Class Form1
         Me.TableLayoutPanel1.Controls.Add(Me.Label12, 1, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label13, 2, 0)
         Me.TableLayoutPanel1.Controls.Add(Me.Label14, 3, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox2, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox3, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.TextBox4, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton1, 3, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.RadioButton2, 4, 1)
         Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TableLayoutPanel1.Location = New System.Drawing.Point(186, 148)
         Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
@@ -259,28 +287,6 @@ Partial Class Form1
         Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.TableLayoutPanel1.Size = New System.Drawing.Size(545, 58)
         Me.TableLayoutPanel1.TabIndex = 10
-        '
-        'TableLayoutPanel2
-        '
-        Me.TableLayoutPanel2.ColumnCount = 4
-        Me.innerTable.SetColumnSpan(Me.TableLayoutPanel2, 3)
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Label15, 0, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label16, 1, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label17, 2, 0)
-        Me.TableLayoutPanel2.Controls.Add(Me.Label18, 3, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(186, 212)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 2
-        Me.innerTable.SetRowSpan(Me.TableLayoutPanel2, 2)
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(545, 58)
-        Me.TableLayoutPanel2.TabIndex = 11
         '
         'Label11
         '
@@ -326,6 +332,82 @@ Partial Class Form1
         Me.Label14.Text = "Gender"
         Me.Label14.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'TextBox2
+        '
+        Me.TextBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox2.Location = New System.Drawing.Point(3, 32)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.PlaceholderText = "Ex: Dela Cruz"
+        Me.TextBox2.Size = New System.Drawing.Size(175, 22)
+        Me.TextBox2.TabIndex = 3
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox3.Location = New System.Drawing.Point(184, 32)
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.PlaceholderText = "Ex: Juan"
+        Me.TextBox3.Size = New System.Drawing.Size(175, 22)
+        Me.TextBox3.TabIndex = 4
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox4.Location = New System.Drawing.Point(365, 32)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(30, 22)
+        Me.TextBox4.TabIndex = 5
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadioButton1.Location = New System.Drawing.Point(401, 32)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(61, 23)
+        Me.RadioButton1.TabIndex = 6
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "Male"
+        Me.RadioButton1.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.RadioButton2.Location = New System.Drawing.Point(468, 32)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(74, 23)
+        Me.RadioButton2.TabIndex = 7
+        Me.RadioButton2.TabStop = True
+        Me.RadioButton2.Text = "Female"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'TableLayoutPanel2
+        '
+        Me.TableLayoutPanel2.ColumnCount = 4
+        Me.innerTable.SetColumnSpan(Me.TableLayoutPanel2, 3)
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.TableLayoutPanel2.Controls.Add(Me.Label15, 0, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label16, 1, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label17, 2, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.Label18, 3, 0)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox5, 0, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox6, 1, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox7, 2, 1)
+        Me.TableLayoutPanel2.Controls.Add(Me.TextBox8, 3, 1)
+        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TableLayoutPanel2.Location = New System.Drawing.Point(186, 212)
+        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
+        Me.TableLayoutPanel2.RowCount = 2
+        Me.innerTable.SetRowSpan(Me.TableLayoutPanel2, 2)
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel2.Size = New System.Drawing.Size(545, 58)
+        Me.TableLayoutPanel2.TabIndex = 11
+        '
         'Label15
         '
         Me.Label15.AutoSize = True
@@ -370,6 +452,42 @@ Partial Class Form1
         Me.Label18.Text = "City"
         Me.Label18.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
+        'TextBox5
+        '
+        Me.TextBox5.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox5.Location = New System.Drawing.Point(3, 32)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.PlaceholderText = "Ex: 123"
+        Me.TextBox5.Size = New System.Drawing.Size(48, 22)
+        Me.TextBox5.TabIndex = 8
+        '
+        'TextBox6
+        '
+        Me.TextBox6.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox6.Location = New System.Drawing.Point(57, 32)
+        Me.TextBox6.Name = "TextBox6"
+        Me.TextBox6.PlaceholderText = "Ex: 25th Street"
+        Me.TextBox6.Size = New System.Drawing.Size(157, 22)
+        Me.TextBox6.TabIndex = 9
+        '
+        'TextBox7
+        '
+        Me.TextBox7.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox7.Location = New System.Drawing.Point(220, 32)
+        Me.TextBox7.Name = "TextBox7"
+        Me.TextBox7.PlaceholderText = "Ex: BGC"
+        Me.TextBox7.Size = New System.Drawing.Size(157, 22)
+        Me.TextBox7.TabIndex = 10
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox8.Location = New System.Drawing.Point(383, 32)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.PlaceholderText = "Ex: Taguig"
+        Me.TextBox8.Size = New System.Drawing.Size(159, 22)
+        Me.TextBox8.TabIndex = 11
+        '
         'Label19
         '
         Me.Label19.AutoSize = True
@@ -393,6 +511,80 @@ Partial Class Form1
         Me.Label20.TabIndex = 13
         Me.Label20.Text = "By submitting, you agree to allow us store and use your data for tracking purpose" &
     "s, to keep us safe in this COVID-19 pandemic."
+        '
+        'DateTimePicker1
+        '
+        Me.DateTimePicker1.CalendarFont = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.DateTimePicker1.CustomFormat = "ddd dd MMM yyyy"
+        Me.DateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
+        Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.DateTimePicker1.Location = New System.Drawing.Point(186, 116)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(177, 22)
+        Me.DateTimePicker1.TabIndex = 1
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox1.Location = New System.Drawing.Point(369, 116)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.PlaceholderText = "Ex: 35.6"
+        Me.TextBox1.Size = New System.Drawing.Size(177, 22)
+        Me.TextBox1.TabIndex = 2
+        '
+        'CheckBox1
+        '
+        Me.CheckBox1.AutoSize = True
+        Me.CheckBox1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CheckBox1.Location = New System.Drawing.Point(186, 276)
+        Me.CheckBox1.Name = "CheckBox1"
+        Me.CheckBox1.Size = New System.Drawing.Size(177, 59)
+        Me.CheckBox1.TabIndex = 12
+        Me.CheckBox1.Text = "Currently having fever?"
+        Me.CheckBox1.UseVisualStyleBackColor = True
+        '
+        'CheckBox2
+        '
+        Me.CheckBox2.AutoSize = True
+        Me.CheckBox2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CheckBox2.Location = New System.Drawing.Point(369, 276)
+        Me.CheckBox2.Name = "CheckBox2"
+        Me.CheckBox2.Size = New System.Drawing.Size(177, 59)
+        Me.CheckBox2.TabIndex = 13
+        Me.CheckBox2.Text = "Currently having colds?"
+        Me.CheckBox2.UseVisualStyleBackColor = True
+        '
+        'CheckBox3
+        '
+        Me.CheckBox3.AutoSize = True
+        Me.CheckBox3.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.CheckBox3.Location = New System.Drawing.Point(552, 276)
+        Me.CheckBox3.Name = "CheckBox3"
+        Me.CheckBox3.Size = New System.Drawing.Size(179, 59)
+        Me.CheckBox3.TabIndex = 14
+        Me.CheckBox3.Text = "Currently having cough?"
+        Me.CheckBox3.UseVisualStyleBackColor = True
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.TextBox9.Location = New System.Drawing.Point(186, 373)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.PlaceholderText = "Ex: 0912 345 6789"
+        Me.TextBox9.Size = New System.Drawing.Size(177, 22)
+        Me.TextBox9.TabIndex = 15
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Button1.Location = New System.Drawing.Point(552, 341)
+        Me.Button1.Name = "Button1"
+        Me.innerTable.SetRowSpan(Me.Button1, 2)
+        Me.Button1.Size = New System.Drawing.Size(179, 67)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "Submit"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -443,4 +635,20 @@ Partial Class Form1
     Friend WithEvents Label18 As Label
     Friend WithEvents Label19 As Label
     Friend WithEvents Label20 As Label
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents RadioButton1 As RadioButton
+    Friend WithEvents RadioButton2 As RadioButton
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents TextBox7 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents CheckBox1 As CheckBox
+    Friend WithEvents CheckBox2 As CheckBox
+    Friend WithEvents CheckBox3 As CheckBox
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents Button1 As Button
 End Class
