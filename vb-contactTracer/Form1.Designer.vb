@@ -28,7 +28,6 @@ Partial Class Form1
         Me.innerTable = New System.Windows.Forms.TableLayoutPanel()
         Me.heading = New System.Windows.Forms.Label()
         Me.note = New System.Windows.Forms.Label()
-        Me.time = New System.Windows.Forms.Label()
         Me.dataLabel = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
@@ -64,11 +63,17 @@ Partial Class Form1
         Me.cough = New System.Windows.Forms.CheckBox()
         Me.mobile = New System.Windows.Forms.TextBox()
         Me.submit = New System.Windows.Forms.Button()
+        Me.camera = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.startButton = New System.Windows.Forms.Button()
+        Me.scanButton = New System.Windows.Forms.Button()
         Me.clock = New System.Windows.Forms.Timer(Me.components)
         Me.outerTable.SuspendLayout()
         Me.innerTable.SuspendLayout()
         Me.infoTable.SuspendLayout()
         Me.addressTable.SuspendLayout()
+        CType(Me.camera, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'outerTable
@@ -98,7 +103,6 @@ Partial Class Form1
         Me.innerTable.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.innerTable.Controls.Add(Me.heading, 0, 0)
         Me.innerTable.Controls.Add(Me.note, 0, 1)
-        Me.innerTable.Controls.Add(Me.time, 3, 0)
         Me.innerTable.Controls.Add(Me.dataLabel, 0, 2)
         Me.innerTable.Controls.Add(Me.Label5, 1, 2)
         Me.innerTable.Controls.Add(Me.Label6, 2, 2)
@@ -117,6 +121,8 @@ Partial Class Form1
         Me.innerTable.Controls.Add(Me.cough, 3, 8)
         Me.innerTable.Controls.Add(Me.mobile, 1, 10)
         Me.innerTable.Controls.Add(Me.submit, 3, 9)
+        Me.innerTable.Controls.Add(Me.camera, 3, 0)
+        Me.innerTable.Controls.Add(Me.TableLayoutPanel1, 3, 3)
         Me.innerTable.Dock = System.Windows.Forms.DockStyle.Fill
         Me.innerTable.Location = New System.Drawing.Point(23, 23)
         Me.innerTable.Name = "innerTable"
@@ -162,19 +168,6 @@ Partial Class Form1
         Me.note.Text = "Note: Please fill out all fields honestly. Also, kindly not forget to submit this" &
     " afterwards."
         Me.note.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'time
-        '
-        Me.time.AutoSize = True
-        Me.time.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.time.Font = New System.Drawing.Font("Century Gothic", 27.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point)
-        Me.time.Location = New System.Drawing.Point(552, 0)
-        Me.time.Name = "time"
-        Me.innerTable.SetRowSpan(Me.time, 4)
-        Me.time.Size = New System.Drawing.Size(179, 145)
-        Me.time.TabIndex = 2
-        Me.time.Text = "Time"
-        Me.time.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'dataLabel
         '
@@ -588,6 +581,55 @@ Partial Class Form1
         Me.submit.Text = "Submit"
         Me.submit.UseVisualStyleBackColor = True
         '
+        'camera
+        '
+        Me.camera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.camera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
+        Me.camera.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.camera.Location = New System.Drawing.Point(552, 3)
+        Me.camera.Name = "camera"
+        Me.innerTable.SetRowSpan(Me.camera, 3)
+        Me.camera.Size = New System.Drawing.Size(179, 107)
+        Me.camera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.camera.TabIndex = 19
+        Me.camera.TabStop = False
+        '
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.ColumnCount = 2
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.TableLayoutPanel1.Controls.Add(Me.startButton, 0, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.scanButton, 1, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(552, 116)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.RowCount = 1
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(179, 26)
+        Me.TableLayoutPanel1.TabIndex = 20
+        '
+        'startButton
+        '
+        Me.startButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.startButton.Font = New System.Drawing.Font("Century Gothic", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.startButton.Location = New System.Drawing.Point(3, 3)
+        Me.startButton.Name = "startButton"
+        Me.startButton.Size = New System.Drawing.Size(83, 20)
+        Me.startButton.TabIndex = 0
+        Me.startButton.Text = "Start Cam"
+        Me.startButton.UseVisualStyleBackColor = True
+        '
+        'scanButton
+        '
+        Me.scanButton.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.scanButton.Font = New System.Drawing.Font("Century Gothic", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.scanButton.Location = New System.Drawing.Point(92, 3)
+        Me.scanButton.Name = "scanButton"
+        Me.scanButton.Size = New System.Drawing.Size(84, 20)
+        Me.scanButton.TabIndex = 2
+        Me.scanButton.Text = "Scan QR"
+        Me.scanButton.UseVisualStyleBackColor = True
+        '
         'clock
         '
         Me.clock.Enabled = True
@@ -614,6 +656,8 @@ Partial Class Form1
         Me.infoTable.PerformLayout()
         Me.addressTable.ResumeLayout(False)
         Me.addressTable.PerformLayout()
+        CType(Me.camera, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TableLayoutPanel1.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -622,7 +666,6 @@ Partial Class Form1
     Friend WithEvents innerTable As TableLayoutPanel
     Friend WithEvents heading As Label
     Friend WithEvents note As Label
-    Friend WithEvents time As Label
     Friend WithEvents dataLabel As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
@@ -659,4 +702,8 @@ Partial Class Form1
     Friend WithEvents mobile As TextBox
     Friend WithEvents submit As Button
     Friend WithEvents clock As Timer
+    Friend WithEvents camera As PictureBox
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents startButton As Button
+    Friend WithEvents scanButton As Button
 End Class

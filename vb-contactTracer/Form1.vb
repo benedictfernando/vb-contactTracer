@@ -1,9 +1,13 @@
 ﻿Imports System.IO
+Imports MessagingToolkit.QRCode.Codec
+Imports AForge
+Imports AForge.Video
+Imports AForge.Video.DirectShow
 
 Public Class Form1
     Private Sub clock_Tick(sender As Object, e As EventArgs) Handles clock.Tick
         day.Value = DateTime.Now
-        time.Text = DateTime.Now.ToShortTimeString()
+        ' time.Text = DateTime.Now.ToShortTimeString()
     End Sub
 
     Private Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click
@@ -164,4 +168,50 @@ Public Class Form1
         End If
     End Sub
 
+    ' ------------- For QR Code functionality ------------- '
+
+    Dim MyWebcam As VideoCaptureDevice
+    Dim Reader As QRCodeDecoder
+
+    Private Sub StartWebcam()
+        Try
+            Dim cameraOptions As VideoCaptureDeviceForm = New VideoCaptureDeviceForm
+            If cameraOptions.ShowDialog() = Windows.Forms.DialogResult.OK Then
+                MyWebcam = cameraOptions.VideoDevice
+                AddHandler MyWebcam.NewFrame, New NewFrameEventHandler(AddressOf Captured)
+                MyWebcam.Start()
+            End If
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Captured(sender As Object, eventArgs As NewFrameEventArgs)
+        camera.Image = DirectCast(eventArgs.Frame.Clone(), Bitmap)
+    End Sub
+
+    Private Sub StopWebcam()
+        Try
+            MyWebcam.Stop()
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles startButton.Click
+        StartWebcam()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles scanButton.Click
+        Try
+            StopWebcam()
+            Reader = New QRCodeDecoder
+            Dim text As String = Reader.decode(New Data.QRCodeBitmapImage(camera.Image))
+
+            MsgBox(text)
+            ' MsgBox("QR Code scan successful! Details are now filled up. Please click submit.")
+        Catch ex As Exception
+            StartWebcam()
+        End Try
+    End Sub
 End Class
