@@ -208,8 +208,42 @@ Public Class Form1
             Reader = New QRCodeDecoder
             Dim text As String = Reader.decode(New Data.QRCodeBitmapImage(camera.Image))
 
-            MsgBox(text)
-            ' MsgBox("QR Code scan successful! Details are now filled up. Please click submit.")
+            Dim values As String() = text.Split(ControlChars.Lf)
+
+            Dim temperature As String = values(1).Substring(0, 2)
+            temp.Text = temperature
+
+            ' for full name
+            Dim fullName As String() = values(2).Split(" ")
+            Dim surname As String = fullName(0).Substring(0, fullName(0).Length - 1)
+            Dim firstName As String = fullName(1)
+            Dim middleInitial As String = fullName(2)
+            last.Text = surname
+            first.Text = firstName
+            middle.Text = middleInitial
+
+            Dim gender As String = values(3)
+            If (gender = "Male") Then
+                male.Checked = True
+            ElseIf (gender = "Female") Then
+                female.Checked = True
+            End If
+
+            ' for address 
+            Dim address As String() = values(4).Split(" ")
+            Dim houseVal As String = address(0)
+            Dim streetVal As String = address(1) & " " & address(2)
+            Dim barangayVal As String = address(3).Substring(0, address(3).Length - 1)
+            Dim cityVal As String = address(4)
+            house.Text = houseVal
+            street.Text = streetVal
+            barangay.Text = barangayVal
+            city.Text = cityVal
+
+            Dim contacts As String = values(6)
+            mobile.Text = contacts
+
+            MsgBox("QR Code scan successful! Details are now filled up~ please click submit.")
         Catch ex As Exception
             StartWebcam()
         End Try
